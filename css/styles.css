@@ -1,0 +1,249 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    height: 100vh;
+}
+.navbar {
+    z-index: 77;
+    display: flex;
+    padding: 10px 70px;
+    justify-content: space-between;
+    background-color: transparent;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    border: 1px solid red;
+}
+.menu {
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+}
+.menu li:last-child a {
+    border: 1px solid white;
+    
+}
+.menu li:last-child a:hover {
+    color: black;
+    transition: .5s;
+    background-color: white;
+    
+}
+.menu li a {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    padding: 10px 10px;
+}
+.menu li:hover a{
+    border: 1px solid white;
+}
+.site-container {
+    width: 100%;
+    height: 100%;
+}
+.bg-image {
+    background: url(../images/main-cover.jpeg) no-repeat center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.bottom-bg {
+    height: 100%;
+    width: 100%;
+    /* falta hacer lo prefixes para los demas navegadores */
+    background: -webkit-linear-gradient(top,rgba(20, 20, 20, 0) 50%,rgba(20,20,20,0) 70%,rgb(0, 0, 0) 100%);
+}
+.left-bg {
+    width: 100%;
+    height: 100%;
+    display: flex;                            
+    /* falta hacer lo prefixes para los demas navegadores */
+    /* rgba(3, 13, 79, 0.68) */
+    background: linear-gradient(to right, rgba(3, 13, 79, 0.77) 0%,rgba(0, 0, 0, 0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 2px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    border: 1px solid white;
+    transition: .5s;
+}
+.btn:hover {
+    background: white;
+    color: black;
+}
+.header-container {
+    color: white;
+}
+.header-container h1 {
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 800;
+    font-size: 3.5em;
+}
+.header-container p{
+    font-size: 20px;
+}
+.down-arrow {
+    cursor: pointer;
+    width: 30px;
+    height: 55px;
+    border-radius: 25px;
+    border: 2px solid white;
+    position: absolute;
+    bottom: 10px;
+    z-index: 2;
+    left: calc(50% - 25px);
+}
+.down-arrow:hover {
+    opacity: .5;
+}
+.down-arrow span::before {
+    position: absolute;
+    top: 10px;
+    content: '';
+    background-color: white;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+}
+.down-arrow span {
+    position: absolute;
+    top: 0;
+    margin-left: -2.6px;
+    animation: scroll 2s ease infinite;
+}
+.services {
+    height: 100vh;
+    padding-top: 70px;
+}
+.services-description {
+    text-align: center;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.cards-container {
+    margin: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    position: relative;
+    width: 360px;
+    height: 320px;
+    perspective: 1000px;   
+    /*box-shadow: -5px 1rem 3rem 4px rgba(8, 5, 4, 0.45);
+     hacer los prefijos de perspective y de la mayoria del resto de los estilos */
+}
+.front-card {
+    background: url(../images/service1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotateY(0deg);
+}
+.back-card {
+    background-color: rgb(185, 181, 181);
+    transform: rotateY(180deg);   
+}
+.front-card , .back-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    box-shadow: -5px 1rem 3rem 4px rgba(8, 5, 4, 0.45);
+    transition: transform 0.75s cubic-bezier(.45,.2,.2,1);
+    perspective: inherit;
+}
+.card:hover .front-card {
+     transform: rotateY(-180deg);
+}
+.card:hover .back-card {
+     transform: rotateY(0deg);
+}
+.content-card h3 {
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 25px;
+}
+.content-card span {
+    display: inline-block;
+    background: url(../icons/icon-maintenance.png);
+    background-size: cover;
+    width: 96px;
+    height: 96px;
+}
+.content-card {
+    backface-visibility: hidden;
+    transform: translateZ(100px) scale(.9);
+    text-align: center;
+}
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    background: rgba(27, 26, 26, 0.8);
+}
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+@keyframes scroll {
+    0% {
+		transform: translateY(0);
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	80% {
+		transform: translateY(20px);
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
