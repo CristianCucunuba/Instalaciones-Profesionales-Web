@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,7 +18,7 @@
             <img src="" alt="logo">
         </figure>
         <ul class="menu">
-            <li><a href="">Servicios</a></li>
+            <li><a href="#services">Servicios</a></li>
             <li><a href="">Quienes Somos</a></li>
             <li><a href="">Proyectos</a></li>
             <li><a href="">Contacto</a></li>
@@ -50,7 +52,7 @@
             <div class="cards-container">
                 <div class="card">
                     <div class="front-card first-service">
-                        <div class="overlay">
+                        <div class="overlay-card">
                             <div class="content-card">
                                 <div class="icon-container">
                                     <i class="fas fa-cogs"></i>
@@ -68,7 +70,7 @@
                 </div>
                 <div class="card">
                     <div class="front-card second-service">
-                        <div class="overlay">
+                        <div class="overlay-card">
                             <div class="content-card">
                                 <div class="icon-container">
                                     <i class="fas fa-video"></i>
@@ -86,7 +88,7 @@
                 </div>
                 <div class="card">
                     <div class="front-card third-service">
-                        <div class="overlay">
+                        <div class="overlay-card">
                             <div class="content-card">
                                 <div class="icon-container">
                                     <i class="fas fa-microphone"></i>
@@ -106,20 +108,39 @@
         </div>
     </section>
     <section class="about">
-        <div class="about-image">
-            <div class="bottom-bg">
-                <div class="about-overlay">
-                    <div class="container">
-                        <div class="about-content">
-                            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum distinctio officia autem libero perspiciatis magni.</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ratione quo error officia porro, consequatur laudantium. Accusamus, neque nihil ipsa mollitia voluptatem dolore pariatur id corrupti. Ex, labore. Omnis, odio.</p>
-                            <a href="">Cuentanos tu proyecto</a>
-                        </div>
-                    </div>
+        <div class="about-container">
+            <div class="about-image">
+                <div class="container-hover-btn">
+                    <a class="btn" href="#">Cuentanos tu proyecto</a>
+                </div>
+            </div>
+            <div class="about-description">
+                <h3>Quienes Somos</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eaque iste quisquam, tenetur sit quos adipisci voluptate, accusamus sunt repellat consequatur et soluta, impedit necessitatibus. Odio error obcaecati ipsam sit.</p>
+                <div class="list-of-abilities">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
+    <section class="providers">
+        <div id="owl-example" class="owl-carousel">
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+            <div> Your Content </div>
+          </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,234 @@
+@import "lib/_variables.styl"
+@import "lib/_mixins.styl"
+@import "lib/_functions.styl"
+@import "lib/_animations.styl"
+@import "layout/_site.styl"
+@import "base/_links.styl"
+@import "base/_buttons.styl"
+@import "components/_utilities.styl"
+@import "layout/_navbar.styl"
+
+
+.site-container
+.bg-image
+.bottom-bg
+.left-bg
+.front-card
+.back-card
+    mixin-fullsize()
+
+.bg-image
+    background-image: url(../images/main-cover.jpeg)
+    background-attachment: fixed
+    background-size: cover
+    background-repeat: no-repeat
+
+.bottom-bg
+    background: linear-gradient(top,rgba(20, 20, 20, 0) 50%,rgba(20,20,20,0) 70%,rgb(0, 0, 0) 100%)
+
+.left-bg
+    mixin-flexbox()
+    background: linear-gradient(to bottom, rgba(255, 3, 113, 0.5), rgba(211,0,130,0.502), rgba(158, 1, 138, 0.5), rgba(98, 27, 136, 0.5), rgba(6, 32, 124, 0.5))
+    position: relative
+    text-align: center
+
+.header-container
+    color: white
+    h1 
+        text-transform: uppercase
+        margin: 0
+        font-weight: 800
+        font-size: 50px
+    p
+        font-size: 20px
+        margin-bottom: 35px
+
+.down-arrow
+    cursor: pointer
+    width: 30px
+    height: 55px
+    border-radius: 25px
+    mixin-border(2px)
+    position: absolute
+    bottom: 10px
+    z-index: 5
+    left: calc(50% - 17px)
+    &:hover
+        opacity: .5
+    span::before
+        position: absolute
+        top: 10px
+        content: ''
+        background-color: color-accent
+        width: 6px
+        height: 6px
+        border-radius: 100%
+    span 
+        position: absolute
+        top: 0
+        margin-left: -2.6px
+        animation: scroll 2s ease infinite
+
+.services
+.about
+    background: color-greyBackground
+    padding: 45px 40px
+
+.services-description
+    text-align: center
+    h1
+        margin: 0
+        color: color-accent
+        font-size: 40px
+    p
+        text-align: start
+.container
+    background: white
+    padding: 40px
+
+.cards-container
+    display: flex
+    justify-content: space-evenly
+    flex-wrap: wrap
+    margin-top: 50px
+
+.card
+    position: relative
+    width: 330px
+    height: 350px
+    perspective: 1000px
+    &:hover .front-card
+        transform: rotateY(-180deg)
+    &:hover .back-card 
+        transform: rotateY(0deg)
+
+.front-card, .back-card 
+    position: absolute
+    top: 0
+    left: 0
+    border-radius: 10px
+    transform-style: preserve-3d
+    backface-visibility: hidden
+    box-shadow: -15px 15px 15px 0 rgba(0,0,0,.05), 15px 15px 15px 0 rgba(0,0,0,.05)
+    transition: transform 0.85s cubic-bezier(.45,.2,.2,1)
+    perspective: inherit
+
+.back-card 
+    background-color: color-greyBackground
+    transform: rotateY(180deg)
+    .content-card
+        text-align: center
+        padding: 70px 40px
+        z-index 10
+        h3
+            color: color-accent   
+
+.first-service
+    background: url(../images/service1.jpg)
+    background-position: 48% 62%
+    background-repeat: no-repeat
+
+.second-service
+    background: url(../images/service2.jpg)
+    background-position: 100%
+    background-size: cover
+    background-repeat: no-repeat
+
+.third-service 
+    background: url(../images/service3.jpeg)
+    background-position: 8%
+    background-size: cover
+    background-repeat: no-repeat
+
+.overlay-card
+    mixin-flexbox()
+    mixin-fullsize()
+    border-radius: 10px 
+    background: color-blueBackground
+    text-align: center 
+
+.content-card
+    backface-visibility: hidden
+    transform: translateZ(100px) scale(.8)
+    h3 
+        color: white
+        margin: 0
+        text-transform: uppercase
+        font-weight: 800
+        font-size: 25px
+    .icon-container
+        font-size: 100px
+        color: white
+
+.about
+    padding-top: 0
+
+.about-container
+    display: grid
+    grid-template-columns: 500px 1fr
+    grid-template-rows: 500px
+    background: white
+
+.about-image
+    background-image: url(../images/about-image.jpeg)
+    background-size: cover
+    background-repeat: no-repeat
+    
+.about-description
+    padding: 20px 40px
+    h3
+        color: color-accent
+        font-size: 40px
+        margin: 0
+    ul
+        display: grid
+        grid-template-rows: repeat(3, auto)
+        grid-gap: 15px
+        justify-content: center
+        list-style: none
+        padding: 0
+        margin: 0
+        li
+            position: relative
+            padding: 20px
+            color: white
+            width: fit-content
+            background-color: lighten(color-secondary, 35%)
+            box-shadow: 0 -3px rgba(0, 0, 0, 0.1) inset
+            transition: all 0.45s cubic-bezier(0.68, 0, 0.265, 3)
+            transform-style: preserve-3d
+            &::before
+                width: 100%
+                height 40%
+                content: ''
+                position: absolute
+                background-color: color-secondaryDarker
+                transform-origin: 0% 0%
+                transform: rotateX(-90deg)
+                left: 0
+                top: 99%
+                transition: all 0.45s cubic-bezier(0.68, 0, 0.265, 3)
+            &:hover
+                transform: rotateX(25deg)
+
+.about-image
+    transition: .5s ease
+    &:hover
+        background-position-x: center
+        a
+            mixin-btn-transition()
+    .container-hover-btn
+        mixin-fullsize()
+        background-color: color-blackOverlay
+        display: flex
+        justify-content: center
+        align-items: center
+    a
+        mixin-border()
+        background-color: transparent
+        border-radius: 5px
+
+
+    
+
+
