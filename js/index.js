@@ -1,7 +1,7 @@
 $(document).ready( function () {
     let owl = $('.owl-carousel')
     owl.owlCarousel({
-        items: 5,
+        items: 7,
         loop: true,
         margin: 50,
         autoplay: true,
@@ -10,5 +10,4 @@ $(document).ready( function () {
         center: true,
         autoplayHoverPause: true
     });
-    
 });
