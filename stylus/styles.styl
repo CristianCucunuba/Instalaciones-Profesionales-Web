@@ -17,6 +17,7 @@
 .back-card
     mixin-fullsize()
 
+
 .bg-image
     background-image: url(../images/main-cover.jpeg)
     background-attachment: fixed
@@ -28,7 +29,7 @@
 
 .left-bg
     mixin-flexbox()
-    background: linear-gradient(to bottom, rgba(255, 3, 113, 0.5), rgba(211,0,130,0.502), rgba(158, 1, 138, 0.5), rgba(98, 27, 136, 0.5), rgba(6, 32, 124, 0.5))
+    background: linear-gradient(to right, rgba(255, 3, 113, 0.6), rgba(211,0,130,0.6), rgba(158, 1, 138, 0.6), rgba(98, 27, 136, 0.6), rgba(6, 32, 124, 0.6))
     position: relative
     text-align: center
 
@@ -227,12 +228,14 @@
         mixin-border()
         background-color: transparent
         border-radius: 5px
+.providers
+    padding: 20px 40px
 
 .providers-heading
     display: flex
     align-items: center
     justify-content: center
-    padding: 40px
+    margin-bottom: 45px
     .line
         background-color: color-accent
         width: 30%
@@ -244,10 +247,81 @@
         font-size: 20px
 
 .owl-carousel-container
-    display: flex
     margin: 0 auto
     max-width: 1050px
+.contact-us
+    padding: 40px
+    background-color: color-greyBackground
+    margin-bottom: 150px
+
+.contact-wrapper
+    background-color: white
+    display: grid
+    grid-template-columns: 1fr 250px 1fr
+    align-items: center
+    justify-items: center
+    padding: 30px 10px
+    box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.3)
 
 
+.contact-info
+    mixin-fullsize()
+    background-color: color-secondary
+    text-align: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    color: white
+    p
+        margin: 2px
 
+.contact-heading
+    color: color-textColor
+    padding-right: 25px
+    padding-left: 25px
+    h4
+        color: color-accent
+        font-size: 40px
+        margin-bottom: 0
 
+.form-wrapper
+    padding: 40px
+    p
+        margin-bottom: 5px
+        color: color-textColor
+    textarea
+    input
+        mixin-fullsize()
+        font-family: 'Montserrat'
+        resize: none
+        padding: 5px
+        font-size: 15px
+    button
+        display: inline-block
+        padding: 15px 40px
+        border-radius: 0
+        box-shadow: none
+        margin: 10px 0
+        mixin-border(1px, transparent)
+        &:hover
+            mixin-btn-hover()
+            mixin-border()
+
+footer
+    position: fixed 
+    bottom: 0
+    left: 0
+    right: 0
+    background: color-accent
+    height: 150px
+    z-index: -20
+    display: flex
+    justify-content: space-around
+    align-items: center
+    figure
+        width: 100px
+        height: 80px
+        margin: 0
+    p
+        font-size: 14px
+        text-align: end
